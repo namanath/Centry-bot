@@ -1,6 +1,7 @@
 from nextcord.ext import commands
 from nextcord import Embed, Color
 import requests, json, random, datetime, asyncio
+import os
 
 links = json.load(open("gifs.json"))
 bot = commands.Bot(command_prefix=["!", "/dog-"])
@@ -99,4 +100,4 @@ async def on_command_error(ctx, error):
 
 # Launching the bot
 if __name__ == '__main__':
-    bot.run("OTI3Mjc4OTU5MDc3NDkwNjg5.YdH50w.2TbKAqZY6i0iRfNzPWs8-B_D2Mg")
+    bot.run(os.environ["DISCORD_TOKEN"])
