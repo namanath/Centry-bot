@@ -1,7 +1,7 @@
+import os
 from nextcord.ext import commands
 from nextcord import Embed, Color
 import requests, json, random, datetime, asyncio
-import os
 
 links = json.load(open("gifs.json"))
 bot = commands.Bot(command_prefix=["!", "/dog-"])
