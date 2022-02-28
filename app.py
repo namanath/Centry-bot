@@ -20,7 +20,7 @@ async def SendMessage(ctx):
 async def SendMessage(ctx):
      await ctx.send(":coffee:")
      
-@bot.command(name="gn")
+@bot.command(name="gn"), 946449823505195111
 async def SendMessage(ctx):
      await ctx.send(":crescent_moon:")
 
@@ -52,7 +52,7 @@ async def schedule_daily_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("Good Morning y'all!")
     await channel.send(random.choice(links["play"]))
@@ -65,7 +65,7 @@ async def schedule_nightly_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("It's High Night")
     
@@ -76,7 +76,7 @@ async def schedule_noon_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("It's High Noon!")
 
