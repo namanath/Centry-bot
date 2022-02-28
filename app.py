@@ -20,7 +20,7 @@ async def SendMessage(ctx):
 async def SendMessage(ctx):
      await ctx.send(":coffee:")
      
-@bot.command(name="gn"), 946449823505195111
+@bot.command(name="gn")
 async def SendMessage(ctx):
      await ctx.send(":crescent_moon:")
 
