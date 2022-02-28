@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix=["!", "/dog-"])
 @bot.command(name="hi")
 async def SendMessage(ctx):
     await ctx.send("Hello!")
-    e
+    
 @bot.command(name="gm")
 async def SendMessage(ctx):
      await ctx.send(":coffee:")
@@ -52,7 +52,7 @@ async def schedule_daily_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("Good Morning y'all!")
     await channel.send(random.choice(links["play"]))
@@ -65,7 +65,7 @@ async def schedule_nightly_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("It's High Night")
     
@@ -76,7 +76,7 @@ async def schedule_noon_message():
     wait_time = (then-now).total_seconds()
     await asyncio.sleep(wait_time)
     
-    channel = bot.get_channel(771203652836655107) 
+    channel = bot.get_channel(771203652836655107, 946449823505195111) 
     
     await channel.send("It's High Noon!")
 
@@ -93,7 +93,7 @@ async def on_ready():
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
-        em = Embed(title=f"Slow it down bro.", description=f"Try again in {error.retry_after:.2f}s", color=Color.red())
+        em = Embed(title=f"Slow it down boi.", description=f"Try again in {error.retry_after:.2f}s", color=Color.red())
         await ctx.send(embed=em)
         
 
