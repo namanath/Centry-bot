@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix=["!", "/dog-"])
 @bot.command(name="hi")
 async def SendMessage(ctx):
     await ctx.send("Hello!")
-    
+
 @bot.command(name="gm")
 async def SendMessage(ctx):
      await ctx.send(":coffee:")
